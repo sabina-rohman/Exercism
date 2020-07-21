@@ -1,0 +1,13 @@
+input moment -> is a Date("somedate") object
+
+oldTimeInMillis = moment.getTime() 
+** gives time in milliseconds
+
+newTimeInMillis = oldTimeInMillis + 10**12
+** Convert 1 giga seconds (10**9) to milliseconds => 10**12
+** 1 gigasecond is 10**9 seconds and in milliseconds it is 10**12
+
+result = new Date(newTimeInMillis)
+** add this to the moment.getTime() => newTimeInMillis in milliseconds
+
+  
