@@ -3,6 +3,19 @@
 // convenience to get you started writing code faster.
 //
 
-export const findAnagrams = () => {
-  throw new Error("Remove this statement and implement this function");
+export const findAnagrams = (str, arr) => {
+  return arr.filter(word => isAnagram(str.toLowerCase(), word.toLowerCase()));
 }
+
+const isAnagram = (str1, str2) => {
+  if (str1.length !== str2.length) {
+    return false;
+  }
+  if (str1 === str2) {
+    return false;
+  }
+  return arrangeAlphabetically(str1) === arrangeAlphabetically(str2);
+}
+
+const arrangeAlphabetically = str => 
+str.split('').sort().join('');
